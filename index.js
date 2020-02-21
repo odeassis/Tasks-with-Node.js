@@ -15,13 +15,13 @@ function checkIdExist(req, res, next) {
 }
 
 // Middlewares retornar quantidade de requisicoes feitas
-function contReq(req, res, next){
+function countReq(req, res, next){
   console.count('quantidade de requisicoes' );
 
   return next();
 }
 
-server.use(contReq);
+server.use(countReq);
 
 // Rota para listar todos os projetos
 server.get('/projects', (req, res) => {
